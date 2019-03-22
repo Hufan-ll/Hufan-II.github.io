@@ -20,7 +20,8 @@
 <meta property="og:image" content="https://i.imgur.com/zmPH9Cs.png">
 <meta property="og:image" content="https://i.imgur.com/bnynihF.jpg">
 <meta property="og:image" content="https://i.imgur.com/nZGbmhc.png">
-<meta property="og:updated_time" content="2019-03-16T16:43:56.723Z">
+<meta property="og:image" content="https://i.imgur.com/15ydEzf.png">
+<meta property="og:updated_time" content="2019-03-22T04:17:36.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的第一篇博客--利用Hexo+Github搭建过程中遇到的坑">
 <meta name="twitter:description" content="前言这是我的第一篇博客，有点小激动，是初恋的感觉哈哈哈~。经过3天的奋战，终于把这个博客给搭建好了。3天，没想到看着傻瓜教程一步步照着做都需要花费那么多时间，其中有一个晚上还熬到四点钟，还因为这个得了感冒😱.">
@@ -181,7 +182,8 @@
 <h3 id="2-配置-config-yml出现的问题"><a href="#2-配置-config-yml出现的问题" class="headerlink" title="2.配置_config.yml出现的问题"></a>2.配置_config.yml出现的问题</h3><p>deploy后面的内容来自<br><br><img src="https://i.imgur.com/bnynihF.jpg" alt><br><br><br>虽然其实deploy后面内容一般很多教程的博主都已经给了模板，复制他们的模板后改下用户名就可以了，但是，我还是犯错了~~<br></p>
 <h3 id="3-找不到页面404问题"><a href="#3-找不到页面404问题" class="headerlink" title="3.找不到页面404问题"></a>3.找不到页面404问题</h3><p>点击 “read the full documentation” 看看官方的解决方法，一个个排除，一定能行的！！<br><img src="https://i.imgur.com/nZGbmhc.png" alt><br><br></p>
 <h2 id="后期配置中出现的一些问题"><a href="#后期配置中出现的一些问题" class="headerlink" title="后期配置中出现的一些问题"></a>后期配置中出现的一些问题</h2><h3 id="1-手机端头像不显示问题"><a href="#1-手机端头像不显示问题" class="headerlink" title="1.手机端头像不显示问题"></a>1.手机端头像不显示问题</h3><p>修改layout/_partial/mobile-nav.ejs里面第六行代码， 为<br><br><br><code>&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar show&quot;&gt;</code><br>就是再后面加一个’show’，将头像放在”/source/img/“ 这个路径里，然后把头像路径设置成 avatar: “img/头像名称.格式”。</p>
-<h3 id="2-待完善"><a href="#2-待完善" class="headerlink" title="2.待完善"></a>2.待完善</h3><p>好了，就先记这么多了，以后配置过程中遇到什么问题再来完善吧~</p>
+<h3 id="2-标题乱码问题"><a href="#2-标题乱码问题" class="headerlink" title="2.标题乱码问题"></a>2.标题乱码问题</h3><p>在保存hexo中_config.yml的时候选择UTF-8编码<br><img src="https://i.imgur.com/15ydEzf.png" alt><br>保存后记得把后缀TXT去掉</p>
+<h3 id="3-待完善"><a href="#3-待完善" class="headerlink" title="3.待完善"></a>3.待完善</h3><p>好了，就先记这么多了，以后配置过程中遇到什么问题再来完善吧~</p>
 
       
 
@@ -284,7 +286,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建过程中"><span class="toc-number">2.</span> <span class="toc-text">搭建过程中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-解决无法选择master-branch问题"><span class="toc-number">2.1.</span> <span class="toc-text">1.解决无法选择master branch问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置-config-yml出现的问题"><span class="toc-number">2.2.</span> <span class="toc-text">2.配置_config.yml出现的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-找不到页面404问题"><span class="toc-number">2.3.</span> <span class="toc-text">3.找不到页面404问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后期配置中出现的一些问题"><span class="toc-number">3.</span> <span class="toc-text">后期配置中出现的一些问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-手机端头像不显示问题"><span class="toc-number">3.1.</span> <span class="toc-text">1.手机端头像不显示问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-待完善"><span class="toc-number">3.2.</span> <span class="toc-text">2.待完善</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建过程中"><span class="toc-number">2.</span> <span class="toc-text">搭建过程中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-解决无法选择master-branch问题"><span class="toc-number">2.1.</span> <span class="toc-text">1.解决无法选择master branch问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置-config-yml出现的问题"><span class="toc-number">2.2.</span> <span class="toc-text">2.配置_config.yml出现的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-找不到页面404问题"><span class="toc-number">2.3.</span> <span class="toc-text">3.找不到页面404问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后期配置中出现的一些问题"><span class="toc-number">3.</span> <span class="toc-text">后期配置中出现的一些问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-手机端头像不显示问题"><span class="toc-number">3.1.</span> <span class="toc-text">1.手机端头像不显示问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-标题乱码问题"><span class="toc-number">3.2.</span> <span class="toc-text">2.标题乱码问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-待完善"><span class="toc-number">3.3.</span> <span class="toc-text">3.待完善</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
