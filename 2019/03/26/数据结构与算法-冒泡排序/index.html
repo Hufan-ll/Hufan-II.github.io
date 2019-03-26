@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>排序算法--冒泡排序（Java语言） | 方嘉贤的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##冒泡排序（Bubble Sort）是啥？  来源百度百科：  冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。">
+  <meta name="description" content="冒泡排序（Bubble Sort）是啥？ 来源百度百科：冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法--冒泡排序（Java语言）">
 <meta property="og:url" content="http://yoursite.com/2019/03/26/数据结构与算法-冒泡排序/index.html">
 <meta property="og:site_name" content="方嘉贤的个人博客">
-<meta property="og:description" content="##冒泡排序（Bubble Sort）是啥？  来源百度百科：  冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。">
+<meta property="og:description" content="冒泡排序（Bubble Sort）是啥？ 来源百度百科：冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/Hufan-ll/test/master/849589-20171015223238449-2146169197.gif">
-<meta property="og:updated_time" content="2019-03-26T13:21:22.700Z">
+<meta property="og:updated_time" content="2019-03-26T13:23:55.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法--冒泡排序（Java语言）">
-<meta name="twitter:description" content="##冒泡排序（Bubble Sort）是啥？  来源百度百科：  冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。">
+<meta name="twitter:description" content="冒泡排序（Bubble Sort）是啥？ 来源百度百科：冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Hufan-ll/test/master/849589-20171015223238449-2146169197.gif">
   
     <link rel="alternative" href="/atom.xml" title="方嘉贤的个人博客" type="application/atom+xml">
@@ -173,20 +173,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##冒泡排序（Bubble Sort）是啥？</p>
-<blockquote>
-<p>来源百度百科：</p>
+        <h2 id="冒泡排序（Bubble-Sort）是啥？"><a href="#冒泡排序（Bubble-Sort）是啥？" class="headerlink" title="冒泡排序（Bubble Sort）是啥？"></a>冒泡排序（Bubble Sort）是啥？</h2><blockquote>
+<p>来源百度百科：<br>冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。<br><a id="more"></a></p>
 </blockquote>
-<p>冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。<br><a id="more"></a></p>
-<p>##通俗理解<br>简单的说，如果我们想将一个数组从小到大排列，我们可以这样做：<br>1.首先可以将数组的最大值移动到最后面。<br>2.再将次大值移动到倒数第二位。<br>3.以此类推，直到将所有数排列好。  </p>
+<h2 id="通俗理解"><a href="#通俗理解" class="headerlink" title="通俗理解"></a>通俗理解</h2><p>简单的说，如果我们想将一个数组从小到大排列，我们可以这样做：<br>1.首先可以将数组的最大值移动到最后面。<br>2.再将次大值移动到倒数第二位。<br>3.以此类推，直到将所有数排列好。  </p>
 <p>那冒泡排序是怎么实现上述操作的呢？我们来看下算法描述</p>
-<p>##算法描述<br>假设我们有数组arr<br>1.令j为0，arr[j]和arr[j+1]比较，使这两个元素的较大值在排在后面，即若arr[j]&gt;arr[j+1]，两数交换位置，若arr[j]&lt;arr[j+1],不换。<br>2.不管换与不换，j++。<br>3.此时的arr[j]和arr[j+1]再进行比较，重复上述操作直到j=arr.length-1（这是整个排序过程的第一轮排序，即将整个数组中的最大值移动到最后面，所以这一轮排序是在j=arr.length-2的时候停止）<br>4.第一轮结束后我们接着进行第二轮，即将次大值移动到数组的倒数第二个位置。那么这一轮结束的标志就是j=arr.length-3<br>5.接着进行第三轮，第四轮…直到第二小的数排好序（你想啊，我们将其他数都排好了，最后一个肯定就是最小值啦）所以我们一共要进行arr.length-1轮排序。<br>6.每一轮排序结束的标志是j=arr.length-1-i。  </p>
-<p>##动图演示</p>
-<blockquote>
+<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>假设我们有数组arr<br>1.令j为0，arr[j]和arr[j+1]比较，使这两个元素的较大值在排在后面，即若arr[j]&gt;arr[j+1]，两数交换位置，若arr[j]&lt;arr[j+1],不换。<br>2.不管换与不换，j++。<br>3.此时的arr[j]和arr[j+1]再进行比较，重复上述操作直到j=arr.length-1（这是整个排序过程的第一轮排序，即将整个数组中的最大值移动到最后面，所以这一轮排序是在j=arr.length-2的时候停止）<br>4.第一轮结束后我们接着进行第二轮，即将次大值移动到数组的倒数第二个位置。那么这一轮结束的标志就是j=arr.length-3<br>5.接着进行第三轮，第四轮…直到第二小的数排好序（你想啊，我们将其他数都排好了，最后一个肯定就是最小值啦）所以我们一共要进行arr.length-1轮排序。<br>6.每一轮排序结束的标志是j=arr.length-1-i。  </p>
+<h2 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a>动图演示</h2><blockquote>
 <p>图片来源网络，侵删<br><img src="https://raw.githubusercontent.com/Hufan-ll/test/master/849589-20171015223238449-2146169197.gif" alt></p>
 </blockquote>
-<p>##代码实现<br>    public class BubbleSort {<br>    public static void main(String[] args) {<br>        int[] arr = new int[] { 2, 8, 7, 9, 4, 1, 5, 0 };<br>        bubbleSort(arr);<br>    }</p>
-<pre><code>public static void bubbleSort(int[] arr) {
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code>public class BubbleSort {
+public static void main(String[] args) {
+    int[] arr = new int[] { 2, 8, 7, 9, 4, 1, 5, 0 };
+    bubbleSort(arr);
+}
+
+public static void bubbleSort(int[] arr) {
     //控制多少轮
     for (int i = 1; i &lt; arr.length; i++) {
     //控制每一轮的次数
@@ -320,7 +322,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#冒泡排序（Bubble-Sort）是啥？"><span class="toc-number">1.</span> <span class="toc-text">冒泡排序（Bubble Sort）是啥？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通俗理解"><span class="toc-number">2.</span> <span class="toc-text">通俗理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法描述"><span class="toc-number">3.</span> <span class="toc-text">算法描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动图演示"><span class="toc-number">4.</span> <span class="toc-text">动图演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">5.</span> <span class="toc-text">代码实现</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -426,11 +428,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">经验分享</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">经验分享</a>
               </li>
             
             <div class="clearfix"></div>
