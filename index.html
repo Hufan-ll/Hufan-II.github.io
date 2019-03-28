@@ -152,6 +152,126 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-数据结构与算法-快速排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/26/数据结构与算法-快速排序/">排序算法-快速排序（Java实现）</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/26/数据结构与算法-快速排序/" class="archive-article-date">
+  	<time datetime="2019-03-26T13:38:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上篇我们讲了冒泡排序，这次我们讲它的升级版快速排序，“快速”，一看就是个好算法~</p>
+<h2 id="快速排序（QuickSort）是啥？"><a href="#快速排序（QuickSort）是啥？" class="headerlink" title="快速排序（QuickSort）是啥？"></a>快速排序（QuickSort）是啥？</h2><p>我们先看下百度百科的介绍</p>
+<blockquote>
+<p>快速排序（Quicksort）是对冒泡排序的一种改进。<br>快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
+</blockquote>
+<h2 id="简单点"><a href="#简单点" class="headerlink" title="简单点~"></a>简单点~</h2><p>快速排序的步骤：<br>我们可以把快速排序看着三个步骤：<br>1.选择基准值：在待排序列中，按照某种方式挑出一个元素，作为基准值。<br>2.分割操作：以该基准值在序列中的实际位置，把序列分成两个子序列，一边是比它大的值，一遍是比它小的值。<br>3.递归：对两个子序列进行快排，直到序列为空或者只有一个元素。  </p>
+<h2 id="过程演示"><a href="#过程演示" class="headerlink" title="过程演示"></a>过程演示</h2><p>这是我画的一张图，结合这张图再看下面的代码可能会比较好理解一点，当然在看代码的时候最后可以自己画一张草图，可以熟悉一下整个过程，加深理解！  </p>
+<p><img src="https://raw.githubusercontent.com/Hufan-ll/test/master/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.jpg" alt></p>
+<h2 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h2><pre><code>public class QuickSort {
+public static void main(String[] args) {
+    int[] arr = new int[] {9,4,6,8,3,10,4,6};
+    quickSort(arr,0,arr.length - 1);
+    System.out.println(Arrays.toString(arr));
+
+}
+public static void quickSort(int[] arr,int low,int high) {
+    int p,i,j,temp;
+
+    if(low &gt;= high) {
+        return;
+    }
+    //p就是基准数,这里就是每个数组的第一个
+    p = arr[low];
+    i = low;
+    j = high;
+    while(i &lt; j) {
+        //右边当发现小于p的值时停止循环
+        while(arr[j] &gt;= p &amp;&amp; i &lt; j) {
+            j--;
+        }
+
+        //这里一定是右边开始，上下这两个循环不能调换（下面有解析，可以先想想）    
+
+        //左边当发现大于p的值时停止循环
+        while(arr[i] &lt;= p &amp;&amp; i &lt; j) {
+            i++;
+        }
+
+            temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = temp;
+    }
+    arr[low] = arr[i];//这里的arr[i]一定是停小于p的，经过i、j交换后i处的值一定是小于p的(j先走)
+    arr[i] = p; 
+    quickSort(arr,low,j-1);  //对左边快排
+    quickSort(arr,j+1,high); //对右边快排
+
+    }
+}
+</code></pre><h2 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h2><p>1.什么是基准值：<br>其实就是在数组里面找一个数，一般选择数组的第一个数作为基准值，当然这不一定是最佳的基准值，但这不妨碍我们做快速排序。本篇只讲标配版的快排，所以就选第一位作为基准值，以后有机会再更新高配版的~    </p>
+<p>2.快排中为什么一定是右边先开始循环？<br>从右边先开始的前提是我们选择序列中最左边的元素最为基准值。<br>先从右边开始可以保证i,j相等的时候，arr[i] = arr[j] 小于基准值p。这样交换之后才能保证基准值左右两边分别小于和大于它的值。<br>我们图片演示一下：<br><img src="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/ip.I2YiC3No1CJiI5EqtIvZZ2t92zSOu3UWBWM0n3r8!/m/dL8AAAAAAAAAnull&amp;bo=gASIAoAEiAIDCSw!&amp;rf=photolist&amp;t=5" alt><br>可以发现如果左边先走的话将导致分组不成功，即左边的元素并不是都小于基准值。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-数据结构与算法-冒泡排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -384,11 +504,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color1">-数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">经验分享</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
