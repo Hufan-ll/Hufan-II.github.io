@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/Hufan-ll/test/master/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.jpg">
 <meta property="og:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/ip.I2YiC3No1CJiI5EqtIvZZ2t92zSOu3UWBWM0n3r8!/m/dL8AAAAAAAAAnull&bo=gASIAoAEiAIDCSw!&rf=photolist&t=5">
-<meta property="og:updated_time" content="2019-03-28T15:43:14.514Z">
+<meta property="og:updated_time" content="2019-03-28T16:10:42.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法-快速排序（Java实现）">
 <meta name="twitter:description" content="上篇我们讲了冒泡排序，这次我们讲它的升级版快速排序，“快速”，一看就是个好算法~ 快速排序（QuickSort）是啥？我们先看下百度百科的介绍  快速排序（Quicksort）是对冒泡排序的一种改进。快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分">
@@ -224,7 +224,10 @@ public static void quickSort(int[] arr,int low,int high) {
     }
 }
 </code></pre><h2 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h2><p>1.什么是基准值：<br>其实就是在数组里面找一个数，一般选择数组的第一个数作为基准值，当然这不一定是最佳的基准值，但这不妨碍我们做快速排序。本篇只讲标配版的快排，所以就选第一位作为基准值，以后有机会再更新高配版的~    </p>
-<p>2.快排中为什么一定是右边先开始循环？<br>从右边先开始的前提是我们选择序列中最左边的元素最为基准值。<br>先从右边开始可以保证i,j相等的时候，arr[i] = arr[j] 小于基准值p。这样交换之后才能保证基准值左右两边分别小于和大于它的值。<br>我们图片演示一下：<br><img src="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/ip.I2YiC3No1CJiI5EqtIvZZ2t92zSOu3UWBWM0n3r8!/m/dL8AAAAAAAAAnull&amp;bo=gASIAoAEiAIDCSw!&amp;rf=photolist&amp;t=5" alt><br>可以发现如果左边先走的话将导致分组不成功，即左边的元素并不是都小于基准值。</p>
+<hr>
+<p>2.快排中为什么一定是右边先开始循环？<br>从右边先开始的前提是我们选择序列中最左边的元素最为基准值。<br>先从右边开始可以保证i,j相等的时候，arr[i] = arr[j] 小于基准值p。这样交换之后才能保证基准值左右两边分别小于和大于它的值。<br>我们图片演示一下：<br><img src="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/ip.I2YiC3No1CJiI5EqtIvZZ2t92zSOu3UWBWM0n3r8!/m/dL8AAAAAAAAAnull&amp;bo=gASIAoAEiAIDCSw!&amp;rf=photolist&amp;t=5" alt><br>可以发现如果左边先走的话将导致分组不成功，即左边的元素并不是都小于基准值。  </p>
+<hr>
+<p>本篇完，如果有错误的地方欢迎大家指正，一起学习一起进步💪<br>我的公众号:Java小部落<br>不定时发发笔记，找一起学习的伙伴，欢迎大家来搞~</p>
 
       
 
@@ -443,15 +446,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">-数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">经验分享</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
