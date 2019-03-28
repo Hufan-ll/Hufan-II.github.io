@@ -8,20 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>排序算法--冒泡排序（Java语言） | 方嘉贤的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="冒泡排序（Bubble Sort）是啥？ 来源百度百科：冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。">
-<meta name="keywords" content="数据结构">
+  <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法--冒泡排序（Java语言）">
 <meta property="og:url" content="http://yoursite.com/2019/03/26/数据结构与算法-冒泡排序/index.html">
 <meta property="og:site_name" content="方嘉贤的个人博客">
-<meta property="og:description" content="冒泡排序（Bubble Sort）是啥？ 来源百度百科：冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/5xnpsBib8F5m8tDZZ9YdlANlkht1W5j4CgnZb8hqi8M!/c/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=XwlABo0gtRURGTM!&tl=3&vuin=946240977&tm=1553788800&sce=60-2-2&rf=0-0">
 <meta property="og:image" content="https://raw.githubusercontent.com/Hufan-ll/test/master/849589-20171015223238449-2146169197.gif">
-<meta property="og:updated_time" content="2019-03-26T13:23:55.658Z">
+<meta property="og:updated_time" content="2019-03-28T16:16:34.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法--冒泡排序（Java语言）">
-<meta name="twitter:description" content="冒泡排序（Bubble Sort）是啥？ 来源百度百科：冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Hufan-ll/test/master/849589-20171015223238449-2146169197.gif">
+<meta name="twitter:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/5xnpsBib8F5m8tDZZ9YdlANlkht1W5j4CgnZb8hqi8M!/c/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=XwlABo0gtRURGTM!&tl=3&vuin=946240977&tm=1553788800&sce=60-2-2&rf=0-0">
   
     <link rel="alternative" href="/atom.xml" title="方嘉贤的个人博客" type="application/atom+xml">
   
@@ -173,8 +171,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="冒泡排序（Bubble-Sort）是啥？"><a href="#冒泡排序（Bubble-Sort）是啥？" class="headerlink" title="冒泡排序（Bubble Sort）是啥？"></a>冒泡排序（Bubble Sort）是啥？</h2><blockquote>
-<p>来源百度百科：<br>冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。<br><a id="more"></a></p>
+        <p><img src="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/5xnpsBib8F5m8tDZZ9YdlANlkht1W5j4CgnZb8hqi8M!/c/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=XwlABo0gtRURGTM!&amp;tl=3&amp;vuin=946240977&amp;tm=1553788800&amp;sce=60-2-2&amp;rf=0-0" alt><br><a id="more"></a></p>
+<h2 id="冒泡排序（Bubble-Sort）是啥？"><a href="#冒泡排序（Bubble-Sort）是啥？" class="headerlink" title="冒泡排序（Bubble Sort）是啥？"></a>冒泡排序（Bubble Sort）是啥？</h2><blockquote>
+<p>来源百度百科：<br>冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。  </p>
 </blockquote>
 <h2 id="通俗理解"><a href="#通俗理解" class="headerlink" title="通俗理解"></a>通俗理解</h2><p>简单的说，如果我们想将一个数组从小到大排列，我们可以这样做：<br>1.首先可以将数组的最大值移动到最后面。<br>2.再将次大值移动到倒数第二位。<br>3.以此类推，直到将所有数排列好。  </p>
 <p>那冒泡排序是怎么实现上述操作的呢？我们来看下算法描述</p>
@@ -437,7 +436,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">经验分享</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -445,7 +444,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">经验分享</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
