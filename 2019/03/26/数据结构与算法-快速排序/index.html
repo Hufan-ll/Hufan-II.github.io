@@ -8,21 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>排序算法-快速排序（Java实现） | 方嘉贤的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="上篇我们讲了冒泡排序，这次我们讲它的升级版”快速排序”，”快速”，一看就是个好算法~ 快速排序（QuickSort）是啥？我们先看下百度百科的介绍  快速排序（Quicksort）是对冒泡排序的一种改进。快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数">
-<meta name="keywords" content="-数据结构">
+  <meta name="keywords" content="-数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排序算法-快速排序（Java实现）">
 <meta property="og:url" content="http://yoursite.com/2019/03/26/数据结构与算法-快速排序/index.html">
 <meta property="og:site_name" content="方嘉贤的个人博客">
-<meta property="og:description" content="上篇我们讲了冒泡排序，这次我们讲它的升级版”快速排序”，”快速”，一看就是个好算法~ 快速排序（QuickSort）是啥？我们先看下百度百科的介绍  快速排序（Quicksort）是对冒泡排序的一种改进。快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11bAUNf1M5l16/kqsQTn4g*8ClWlwHgKszXuD0Hyf3IcRtk2XVKOLUn0Y!/c/dL4AAAAAAAAA&ek=1&kp=1&pt=0&bo=YAlABo0gtBURGQ0!&tl=3&vuin=946240977&tm=1553824800&sce=60-2-2&rf=0-0">
 <meta property="og:image" content="https://raw.githubusercontent.com/Hufan-ll/test/master/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.jpg">
 <meta property="og:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/ip.I2YiC3No1CJiI5EqtIvZZ2t92zSOu3UWBWM0n3r8!/m/dL8AAAAAAAAAnull&bo=gASIAoAEiAIDCSw!&rf=photolist&t=5">
-<meta property="og:updated_time" content="2019-03-28T16:16:42.473Z">
+<meta property="og:updated_time" content="2019-03-29T02:31:50.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法-快速排序（Java实现）">
-<meta name="twitter:description" content="上篇我们讲了冒泡排序，这次我们讲它的升级版”快速排序”，”快速”，一看就是个好算法~ 快速排序（QuickSort）是啥？我们先看下百度百科的介绍  快速排序（Quicksort）是对冒泡排序的一种改进。快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Hufan-ll/test/master/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.jpg">
+<meta name="twitter:image" content="http://a3.qpic.cn/psb?/V11bAUNf1M5l16/kqsQTn4g*8ClWlwHgKszXuD0Hyf3IcRtk2XVKOLUn0Y!/c/dL4AAAAAAAAA&ek=1&kp=1&pt=0&bo=YAlABo0gtBURGQ0!&tl=3&vuin=946240977&tm=1553824800&sce=60-2-2&rf=0-0">
   
     <link rel="alternative" href="/atom.xml" title="方嘉贤的个人博客" type="application/atom+xml">
   
@@ -174,12 +172,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>上篇我们讲了冒泡排序，这次我们讲它的升级版”快速排序”，”快速”，一看就是个好算法~</p>
+        <p><img src="http://a3.qpic.cn/psb?/V11bAUNf1M5l16/kqsQTn4g*8ClWlwHgKszXuD0Hyf3IcRtk2XVKOLUn0Y!/c/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=YAlABo0gtBURGQ0!&amp;tl=3&amp;vuin=946240977&amp;tm=1553824800&amp;sce=60-2-2&amp;rf=0-0" alt><br><a id="more"></a></p>
+<p>上篇我们讲了冒泡排序，这次我们讲它的升级版”快速排序”，”快速”，一看就是个好算法~</p>
 <h2 id="快速排序（QuickSort）是啥？"><a href="#快速排序（QuickSort）是啥？" class="headerlink" title="快速排序（QuickSort）是啥？"></a>快速排序（QuickSort）是啥？</h2><p>我们先看下百度百科的介绍</p>
 <blockquote>
 <p>快速排序（Quicksort）是对冒泡排序的一种改进。<br>快速排序由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。  </p>
 </blockquote>
-<a id="more"></a>
 <h2 id="简单点"><a href="#简单点" class="headerlink" title="简单点~"></a>简单点~</h2><p>快速排序的步骤：<br>我们可以把快速排序看着三个步骤：<br>1.选择基准值：在待排序列中，按照某种方式挑出一个元素，作为基准值。<br>2.分割操作：以该基准值在序列中的实际位置，把序列分成两个子序列，一边是比它大的值，一遍是比它小的值。<br>3.递归：对两个子序列进行快排，直到序列为空或者只有一个元素。  </p>
 <h2 id="过程演示"><a href="#过程演示" class="headerlink" title="过程演示"></a>过程演示</h2><p>这是我画的一张图，结合这张图再看下面的代码可能会比较好理解一点，当然在看代码的时候最后可以自己画一张草图，可以熟悉一下整个过程，加深理解！  </p>
 <p><img src="https://raw.githubusercontent.com/Hufan-ll/test/master/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.jpg" alt></p>
@@ -196,19 +194,19 @@ public static void quickSort(int[] arr,int low,int high) {
     if(low &gt;= high) {
         return;
     }
-    //p就是基准数,这里就是每个数组的第一个
+//p就是基准数,这里就是每个数组的第一个
     p = arr[low];
     i = low;
     j = high;
     while(i &lt; j) {
-        //右边当发现小于p的值时停止循环
+    //右边当发现小于p的值时停止循环
         while(arr[j] &gt;= p &amp;&amp; i &lt; j) {
             j--;
         }
+        //这里一定是右边开始
+        //（下面有解析，可以先想想）    
 
-        //这里一定是右边开始，上下这两个循环不能调换（下面有解析，可以先想想）    
-
-        //左边当发现大于p的值时停止循环
+            //左边当发现大于p的值时停止        
         while(arr[i] &lt;= p &amp;&amp; i &lt; j) {
             i++;
         }
@@ -217,9 +215,11 @@ public static void quickSort(int[] arr,int low,int high) {
             arr[j] = arr[i];
             arr[i] = temp;
     }
-    arr[low] = arr[i];//这里的arr[i]一定是停小于p的，经过i、j交换后i处的值一定是小于p的(j先走)
+    arr[low] = arr[i];
+//这里的arr[i]一定是停小于p的，
+//经过i、j交换后i处的值一定是小于p的(j先走)
     arr[i] = p; 
-    quickSort(arr,low,j-1);  //对左边快排
+    quickSort(arr,low,j-1); //对左边快排
     quickSort(arr,j+1,high); //对右边快排
 
     }
@@ -451,11 +451,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">-数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color1">-数据结构</a>
               </li>
             
             <div class="clearfix"></div>
