@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 方嘉贤的个人博客</title>
+  <title>数据结构与算法—-插入排序 | 方嘉贤的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="方嘉贤的个人博客，Java学习笔记，数据结构与算法，数据库">
-<meta name="keywords" content="方嘉贤，Java，数据库，数据结构，算法">
-<meta property="og:type" content="website">
-<meta property="og:title" content="方嘉贤的个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="keywords" content="-数据结构与算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构与算法—-插入排序">
+<meta property="og:url" content="http://yoursite.com/2019/04/06/数据结构与算法-插入排序/index.html">
 <meta property="og:site_name" content="方嘉贤的个人博客">
-<meta property="og:description" content="方嘉贤的个人博客，Java学习笔记，数据结构与算法，数据库">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11bAUNf1M5l16/eORsmF6alQ0Jc1Z2glJwkspCrIrm.E8j4WjLZgjYYC0!/b/dL4AAAAAAAAA&ek=1&kp=1&pt=0&bo=YAlABo0gtBURGQ0!&tl=3&vuin=946240977&tm=1554523200&sce=60-2-2&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V11bAUNf1M5l16/5madDJ4zDMqAPe.ufgLf05WHhtquVPQ22UcfVz6kmn8!/b/dL4AAAAAAAAA&bo=LAG0ACwBtAACGT0!&rf=viewer_4">
+<meta property="og:updated_time" content="2019-04-06T04:37:25.289Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="方嘉贤的个人博客">
-<meta name="twitter:description" content="方嘉贤的个人博客，Java学习笔记，数据结构与算法，数据库">
+<meta name="twitter:title" content="数据结构与算法—-插入排序">
+<meta name="twitter:image" content="http://a3.qpic.cn/psb?/V11bAUNf1M5l16/eORsmF6alQ0Jc1Z2glJwkspCrIrm.E8j4WjLZgjYYC0!/b/dL4AAAAAAAAA&ek=1&kp=1&pt=0&bo=YAlABo0gtBURGQ0!&tl=3&vuin=946240977&tm=1554523200&sce=60-2-2&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="方嘉贤的个人博客" type="application/atom+xml">
   
@@ -150,36 +151,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-数据结构与算法-插入排序" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      数据结构与算法—-插入排序
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/06/数据结构与算法-插入排序/" class="archive-article-date">
+
+        
+        <a href="/2019/04/06/数据结构与算法-插入排序/" class="archive-article-date">
   	<time datetime="2019-04-06T03:28:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/06/数据结构与算法-插入排序/">数据结构与算法—-插入排序</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://a3.qpic.cn/psb?/V11bAUNf1M5l16/eORsmF6alQ0Jc1Z2glJwkspCrIrm.E8j4WjLZgjYYC0!/b/dL4AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=YAlABo0gtBURGQ0!&amp;tl=3&amp;vuin=946240977&amp;tm=1554523200&amp;sce=60-2-2&amp;rf=viewer_4" alt><br><a id="more"></a></p>
+<h2 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h2><p>通过构建有序数列，对于未排序元素，在已排序数列中从后往前扫描，找到相应位置并插入。</p>
+<h2 id="简单点"><a href="#简单点" class="headerlink" title="简单点~"></a>简单点~</h2><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><p>1.将一个具有n个元素的待排序数列分成两个子数列，一个有序和一个无序。<br>2.刚开始，我们将左边第一个元素看成一个有序数列，右边n-1个元素看成无序数列。<br>3.从右边无序数列中取出一个元素，在已排序数列中从后往前扫描（比较），找到相应的位置并插入，使插入后有序数列仍然有序。<br>4.重复第3步，直到完成整个排序过程。</p>
+<hr>
+<h3 id="过程演示"><a href="#过程演示" class="headerlink" title="过程演示"></a>过程演示</h3><blockquote>
+<p>图片来源网络，侵删</p>
+</blockquote>
+<blockquote>
+<p><img src="http://m.qpic.cn/psb?/V11bAUNf1M5l16/5madDJ4zDMqAPe.ufgLf05WHhtquVPQ22UcfVz6kmn8!/b/dL4AAAAAAAAA&amp;bo=LAG0ACwBtAACGT0!&amp;rf=viewer_4" alt></p>
+</blockquote>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code>public class InsertSort {
+public static void main(String[] args) {
+    int[] arr = new int[] {3,5,7,8,9,3,4,52,1,3};
+    insertSort(arr);
+    System.out.println(Arrays.toString(arr));
+}
+public static void insertSort(int[] arr) {
+    //从i=1 开始，因为单独一个元素arr[0]是有序的；
+    for(int i = 1;i &lt; arr.length;i++) {
+        //从无序数列中取出一个元素赋值给temp
+        int temp = arr[i];
+        int t = i-1;
+        //不断往前寻找，直到找到比temp小的值或者t小于0为止
+        while(t &gt;= 0 &amp;&amp; arr[t] &gt; temp) {
+            arr[t + 1] = arr[t];
+            t--;
+        }
+        //将temp插在其之后
+        arr[t+1] = temp;
 
-        <div class="article-info info-on-right">
-          
+    }
+}
+
+}
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,133 +224,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/06/数据结构与算法-插入排序/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/26/数据结构与算法-快速排序/" class="archive-article-date">
-  	<time datetime="2019-03-26T13:38:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/26/数据结构与算法-快速排序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">排序算法-快速排序（Java实现）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/26/数据结构与算法-快速排序/">排序算法-快速排序（Java实现）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-数据结构与算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本思想"><span class="toc-number">1.</span> <span class="toc-text">基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单点"><span class="toc-number">2.</span> <span class="toc-text">简单点~</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实现过程"><span class="toc-number">2.1.</span> <span class="toc-text">实现过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过程演示"><span class="toc-number">2.2.</span> <span class="toc-text">过程演示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">3.</span> <span class="toc-text">代码实现</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/26/数据结构与算法-冒泡排序/" class="archive-article-date">
-  	<time datetime="2019-03-26T11:26:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/26/数据结构与算法-冒泡排序/">排序算法--冒泡排序（Java语言）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/16/我的第一篇博客-利用Hexo-Github搭建过程中遇到的坑/" class="archive-article-date">
-  	<time datetime="2019-03-16T13:42:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/16/我的第一篇博客-利用Hexo-Github搭建过程中遇到的坑/">我的第一篇博客--利用Hexo+Github搭建过程中遇到的坑</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">经验分享</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -338,8 +357,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
