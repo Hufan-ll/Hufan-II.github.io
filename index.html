@@ -152,6 +152,105 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-数据结构与算法-希尔排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/08/数据结构与算法-希尔排序/">数据结构与算法-希尔排序</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/08/数据结构与算法-希尔排序/" class="archive-article-date">
+  	<time datetime="2019-04-08T15:27:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><blockquote>
+<p>希尔排序是希尔（Donald Shell）于1959年提出的一种排序算法。希尔排序也是一种插入排序，它是简单插入排序经过改进之后的一个更高效的版本，也称为缩小增量排序，同时该算法是冲破O(n2）的第一批算法之一。</p>
+</blockquote>
+<h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>设待排序元素序列有n个元素<br>1.取一个整数increment（小于n）作为间隔将全部元素分为increment个子序列<br>2.每间隔increment取一个元素，并放在同一个子序列中，对每个子序列实行直接插入排序。<br>3.缩小间隔increment<br>4.重复上述子序列划分和排序工作。直到increment=1，即所有元素放在同一个子序列中进行最后的排序。</p>
+<h3 id="简单点"><a href="#简单点" class="headerlink" title="简单点~"></a>简单点~</h3><p>假设有数组：{a0,a1,a2,a3,a4,a5,a6,a7,a8,a9}<br>此时 n = 10<br>1.一般情况下，我们取increment为：10/2 = 5,则此时：{a0,a5}、{a1,a6}、{a2,a7}、{a3,a8}、{a4,a9}这五组就是该数组的子序列,分别对这些子序列进行插入排序。<br>2.我们再取increment为：5/2 = 2，则此时：{a0,a2,a4,a6,a8}和{a1,a3,a5,a7,a9}这两组就是该数组的子序列,分别对这两个序列进行插入排序。<br>3.我们再取increment为：2/1 = 1,则此时：{a0,a1,a2,a3,a4,a5,a6,a7,a8,a9}所有元素都在同一个子序列中。<br>4.此时对其进行插入排序，因为有前面的工作基础，大多数元素已经基本有序，所以排序速度仍然很快。<br>从上面我们可以看到，增量increment是在逐渐减小的，所以这个方法我们也叫他为：缩小增量排序。</p>
+<h3 id="图示："><a href="#图示：" class="headerlink" title="图示："></a>图示：</h3><p><img src="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/REn.HOkDBLga1Jvi2syqZ.2QDiI7kRcQvy0fhIFVkO0!/c/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=NgM0AjYDNAIDGTw!&amp;tl=1&amp;vuin=946240977&amp;tm=1554789600&amp;sce=60-2-2&amp;rf=0-0" alt></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code>public class ShellSort {
+public static void main(String[] args) {
+    int[] arr = new int[] {3,5,6,7,83,2,5,79,98,0,100};
+    shellSort(arr);
+    System.out.println(Arrays.toString(arr));
+}
+public static void shellSort(int[] arr) {
+    int n = arr.length;
+    for(int increment = n/2;increment &gt; 0;increment/=2) {
+        //下面这段代码和插入排序相同，只是这里的间隔是increment
+        //直接插入排序的间隔是1
+        for(int i = increment;i &lt; arr.length;i++) {
+            int temp = arr[i];
+            int t = i-increment;
+            while(t &gt;= 0 &amp;&amp; arr[t] &gt; temp) {
+                arr[i] = arr[t];
+                t -= increment;
+            }
+            arr[t+increment] = temp;
+
+        }
+    }
+}
+}
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-数据结构与算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-数据结构与算法-插入排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -527,11 +626,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">经验分享</a>
+                <a href="javascript:void(0)" class="js-tag color4">-数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">-数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">经验分享</a>
               </li>
             
             <div class="clearfix"></div>

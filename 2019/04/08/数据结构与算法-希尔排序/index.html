@@ -6,26 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="www.fangjiaxian.cn">
-  <title>我的第一篇博客--利用Hexo+Github搭建过程中遇到的坑 | 方嘉贤的个人博客</title>
+  <title>数据结构与算法-希尔排序 | 方嘉贤的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言这是我的第一篇博客，有点小激动，是初恋的感觉哈哈哈~。经过3天的奋战，终于把这个博客给搭建好了。3天，没想到看着傻瓜教程一步步照着做都需要花费那么多时间，其中有一个晚上还熬到四点钟，还因为这个得了感冒😱.">
-<meta name="keywords" content="经验分享">
+  <meta name="description" content="希尔排序 希尔排序是希尔（Donald Shell）于1959年提出的一种排序算法。希尔排序也是一种插入排序，它是简单插入排序经过改进之后的一个更高效的版本，也称为缩小增量排序，同时该算法是冲破O(n2）的第一批算法之一。  基本思想设待排序元素序列有n个元素1.取一个整数increment（小于n）作为间隔将全部元素分为increment个子序列2.每间隔increment取一个元素，并放在同一">
+<meta name="keywords" content="-数据结构与算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客--利用Hexo+Github搭建过程中遇到的坑">
-<meta property="og:url" content="www.fangjiaxian.cn/2019/03/16/我的第一篇博客-利用Hexo-Github搭建过程中遇到的坑/index.html">
+<meta property="og:title" content="数据结构与算法-希尔排序">
+<meta property="og:url" content="www.fangjiaxian.cn/2019/04/08/数据结构与算法-希尔排序/index.html">
 <meta property="og:site_name" content="方嘉贤的个人博客">
-<meta property="og:description" content="前言这是我的第一篇博客，有点小激动，是初恋的感觉哈哈哈~。经过3天的奋战，终于把这个博客给搭建好了。3天，没想到看着傻瓜教程一步步照着做都需要花费那么多时间，其中有一个晚上还熬到四点钟，还因为这个得了感冒😱.">
+<meta property="og:description" content="希尔排序 希尔排序是希尔（Donald Shell）于1959年提出的一种排序算法。希尔排序也是一种插入排序，它是简单插入排序经过改进之后的一个更高效的版本，也称为缩小增量排序，同时该算法是冲破O(n2）的第一批算法之一。  基本思想设待排序元素序列有n个元素1.取一个整数increment（小于n）作为间隔将全部元素分为increment个子序列2.每间隔increment取一个元素，并放在同一">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/Ue5cU5K.png">
-<meta property="og:image" content="https://i.imgur.com/zmPH9Cs.png">
-<meta property="og:image" content="https://i.imgur.com/bnynihF.jpg">
-<meta property="og:image" content="https://i.imgur.com/nZGbmhc.png">
-<meta property="og:image" content="https://i.imgur.com/15ydEzf.png">
-<meta property="og:updated_time" content="2019-03-22T04:17:36.847Z">
+<meta property="og:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/REn.HOkDBLga1Jvi2syqZ.2QDiI7kRcQvy0fhIFVkO0!/c/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=NgM0AjYDNAIDGTw!&tl=1&vuin=946240977&tm=1554789600&sce=60-2-2&rf=0-0">
+<meta property="og:updated_time" content="2019-04-09T07:27:01.503Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇博客--利用Hexo+Github搭建过程中遇到的坑">
-<meta name="twitter:description" content="前言这是我的第一篇博客，有点小激动，是初恋的感觉哈哈哈~。经过3天的奋战，终于把这个博客给搭建好了。3天，没想到看着傻瓜教程一步步照着做都需要花费那么多时间，其中有一个晚上还熬到四点钟，还因为这个得了感冒😱.">
-<meta name="twitter:image" content="https://i.imgur.com/Ue5cU5K.png">
+<meta name="twitter:title" content="数据结构与算法-希尔排序">
+<meta name="twitter:description" content="希尔排序 希尔排序是希尔（Donald Shell）于1959年提出的一种排序算法。希尔排序也是一种插入排序，它是简单插入排序经过改进之后的一个更高效的版本，也称为缩小增量排序，同时该算法是冲破O(n2）的第一批算法之一。  基本思想设待排序元素序列有n个元素1.取一个整数increment（小于n）作为间隔将全部元素分为increment个子序列2.每间隔increment取一个元素，并放在同一">
+<meta name="twitter:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/REn.HOkDBLga1Jvi2syqZ.2QDiI7kRcQvy0fhIFVkO0!/c/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=NgM0AjYDNAIDGTw!&tl=1&vuin=946240977&tm=1554789600&sce=60-2-2&rf=0-0">
   
     <link rel="alternative" href="/atom.xml" title="方嘉贤的个人博客" type="application/atom+xml">
   
@@ -157,34 +153,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客-利用Hexo-Github搭建过程中遇到的坑" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-数据结构与算法-希尔排序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客--利用Hexo+Github搭建过程中遇到的坑
+      数据结构与算法-希尔排序
     </h1>
   
 
         
-        <a href="/2019/03/16/我的第一篇博客-利用Hexo-Github搭建过程中遇到的坑/" class="archive-article-date">
-  	<time datetime="2019-03-16T13:42:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
+        <a href="/2019/04/08/数据结构与算法-希尔排序/" class="archive-article-date">
+  	<time datetime="2019-04-08T15:27:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是我的第一篇博客，有点小激动，是初恋的感觉哈哈哈~。<br><br>经过3天的奋战，终于把这个博客给搭建好了。3天，没想到看着傻瓜教程一步步照着做都需要花费那么多时间，其中有一个晚上还熬到四点钟，还因为这个得了感冒😱.<br><a id="more"></a><br>可能是因为我没有编程基础吧，目前本人还在学习中，刚刚学完JavaEE，正在学数据结构和数据库，我会把这里当成我的笔记本，不定时在这里写写笔记和分享心得😊 下面进入我们的主题啦~<br><br>(我是参照下面这个教程做的)<br><br><a href="https://blog.csdn.net/AinUser/article/details/77609180" target="_blank" rel="noopener">AinUser</a></p>
-<h2 id="搭建过程中"><a href="#搭建过程中" class="headerlink" title="搭建过程中"></a>搭建过程中</h2><h3 id="1-解决无法选择master-branch问题"><a href="#1-解决无法选择master-branch问题" class="headerlink" title="1.解决无法选择master branch问题"></a>1.解决无法选择master branch问题</h3><p><img src="https://i.imgur.com/Ue5cU5K.png" alt><br><br>这里注意了,最好把一这项给勾不然意味着你的这个库是空的，待会你要自定义域名的时候你是选不了master branch这一项的，你会发现你只能选择None这一项，这样会影响你接下来的很多操作，即使你不自定义域名<br><br><img src="https://i.imgur.com/zmPH9Cs.png" alt><br><br><br>当然好像也可以自己在库里面加一个Html文件在进行绑定域名的操作。</p>
-<h3 id="2-配置-config-yml出现的问题"><a href="#2-配置-config-yml出现的问题" class="headerlink" title="2.配置_config.yml出现的问题"></a>2.配置_config.yml出现的问题</h3><p>deploy后面的内容来自<br><br><img src="https://i.imgur.com/bnynihF.jpg" alt><br><br><br>虽然其实deploy后面内容一般很多教程的博主都已经给了模板，复制他们的模板后改下用户名就可以了，但是，我还是犯错了~~<br></p>
-<h3 id="3-找不到页面404问题"><a href="#3-找不到页面404问题" class="headerlink" title="3.找不到页面404问题"></a>3.找不到页面404问题</h3><p>点击 “read the full documentation” 看看官方的解决方法，一个个排除，一定能行的！！<br><img src="https://i.imgur.com/nZGbmhc.png" alt><br><br></p>
-<h2 id="后期配置中出现的一些问题"><a href="#后期配置中出现的一些问题" class="headerlink" title="后期配置中出现的一些问题"></a>后期配置中出现的一些问题</h2><h3 id="1-手机端头像不显示问题"><a href="#1-手机端头像不显示问题" class="headerlink" title="1.手机端头像不显示问题"></a>1.手机端头像不显示问题</h3><p>修改layout/_partial/mobile-nav.ejs里面第六行代码， 为<br><br><br><code>&lt;img src=&quot;&lt;%=theme.avatar%&gt;&quot; class=&quot;js-avatar show&quot;&gt;</code><br>就是再后面加一个’show’，将头像放在”/source/img/“ 这个路径里，然后把头像路径设置成 avatar: “img/头像名称.格式”。</p>
-<h3 id="2-标题乱码问题"><a href="#2-标题乱码问题" class="headerlink" title="2.标题乱码问题"></a>2.标题乱码问题</h3><p>在保存hexo中_config.yml的时候选择UTF-8编码<br><img src="https://i.imgur.com/15ydEzf.png" alt><br>保存后记得把后缀TXT去掉</p>
-<h3 id="3-待完善"><a href="#3-待完善" class="headerlink" title="3.待完善"></a>3.待完善</h3><p>好了，就先记这么多了，以后配置过程中遇到什么问题再来完善吧~</p>
+        <h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><blockquote>
+<p>希尔排序是希尔（Donald Shell）于1959年提出的一种排序算法。希尔排序也是一种插入排序，它是简单插入排序经过改进之后的一个更高效的版本，也称为缩小增量排序，同时该算法是冲破O(n2）的第一批算法之一。</p>
+</blockquote>
+<h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>设待排序元素序列有n个元素<br>1.取一个整数increment（小于n）作为间隔将全部元素分为increment个子序列<br>2.每间隔increment取一个元素，并放在同一个子序列中，对每个子序列实行直接插入排序。<br>3.缩小间隔increment<br>4.重复上述子序列划分和排序工作。直到increment=1，即所有元素放在同一个子序列中进行最后的排序。</p>
+<h3 id="简单点"><a href="#简单点" class="headerlink" title="简单点~"></a>简单点~</h3><p>假设有数组：{a0,a1,a2,a3,a4,a5,a6,a7,a8,a9}<br>此时 n = 10<br>1.一般情况下，我们取increment为：10/2 = 5,则此时：{a0,a5}、{a1,a6}、{a2,a7}、{a3,a8}、{a4,a9}这五组就是该数组的子序列,分别对这些子序列进行插入排序。<br>2.我们再取increment为：5/2 = 2，则此时：{a0,a2,a4,a6,a8}和{a1,a3,a5,a7,a9}这两组就是该数组的子序列,分别对这两个序列进行插入排序。<br>3.我们再取increment为：2/1 = 1,则此时：{a0,a1,a2,a3,a4,a5,a6,a7,a8,a9}所有元素都在同一个子序列中。<br>4.此时对其进行插入排序，因为有前面的工作基础，大多数元素已经基本有序，所以排序速度仍然很快。<br>从上面我们可以看到，增量increment是在逐渐减小的，所以这个方法我们也叫他为：缩小增量排序。</p>
+<h3 id="图示："><a href="#图示：" class="headerlink" title="图示："></a>图示：</h3><p><img src="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/REn.HOkDBLga1Jvi2syqZ.2QDiI7kRcQvy0fhIFVkO0!/c/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=NgM0AjYDNAIDGTw!&amp;tl=1&amp;vuin=946240977&amp;tm=1554789600&amp;sce=60-2-2&amp;rf=0-0" alt></p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code>public class ShellSort {
+public static void main(String[] args) {
+    int[] arr = new int[] {3,5,6,7,83,2,5,79,98,0,100};
+    shellSort(arr);
+    System.out.println(Arrays.toString(arr));
+}
+public static void shellSort(int[] arr) {
+    int n = arr.length;
+    for(int increment = n/2;increment &gt; 0;increment/=2) {
+        //下面这段代码和插入排序相同，只是这里的间隔是increment
+        //直接插入排序的间隔是1
+        for(int i = increment;i &lt; arr.length;i++) {
+            int temp = arr[i];
+            int t = i-increment;
+            while(t &gt;= 0 &amp;&amp; arr[t] &gt; temp) {
+                arr[i] = arr[t];
+                t -= increment;
+            }
+            arr[t+increment] = temp;
 
+        }
+    }
+}
+}
+</code></pre>
       
 
       
@@ -197,7 +216,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">经验分享</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-数据结构与算法</a>
         		</li>
       		
 		</ul>
@@ -253,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.fangjiaxian.cn/2019/03/16/我的第一篇博客-利用Hexo-Github搭建过程中遇到的坑/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.fangjiaxian.cn/2019/04/08/数据结构与算法-希尔排序/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,15 +286,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/26/数据结构与算法-冒泡排序/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          排序算法--冒泡排序（Java语言）
-        
-      </div>
-    </a>
   
+    <a href="/2019/04/06/数据结构与算法-插入排序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构与算法—-插入排序</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -300,7 +315,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建过程中"><span class="toc-number">2.</span> <span class="toc-text">搭建过程中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-解决无法选择master-branch问题"><span class="toc-number">2.1.</span> <span class="toc-text">1.解决无法选择master branch问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置-config-yml出现的问题"><span class="toc-number">2.2.</span> <span class="toc-text">2.配置_config.yml出现的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-找不到页面404问题"><span class="toc-number">2.3.</span> <span class="toc-text">3.找不到页面404问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后期配置中出现的一些问题"><span class="toc-number">3.</span> <span class="toc-text">后期配置中出现的一些问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-手机端头像不显示问题"><span class="toc-number">3.1.</span> <span class="toc-text">1.手机端头像不显示问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-标题乱码问题"><span class="toc-number">3.2.</span> <span class="toc-text">2.标题乱码问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-待完善"><span class="toc-number">3.3.</span> <span class="toc-text">3.待完善</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#希尔排序"><span class="toc-number">1.</span> <span class="toc-text">希尔排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本思想"><span class="toc-number">1.1.</span> <span class="toc-text">基本思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#简单点"><span class="toc-number">1.2.</span> <span class="toc-text">简单点~</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图示："><span class="toc-number">1.3.</span> <span class="toc-text">图示：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">2.</span> <span class="toc-text">代码实现</span></a></li></ol>
                     </div>
                 </span>
             </div>
