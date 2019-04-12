@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="www.fangjiaxian.cn">
-  <title>排序算法--冒泡排序（Java语言） | 方嘉贤的个人博客</title>
+  <title>数据结构与算法-选择排序 | 方嘉贤的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="keywords" content="-排序算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="排序算法--冒泡排序（Java语言）">
-<meta property="og:url" content="www.fangjiaxian.cn/2019/03/26/数据结构与算法-冒泡排序/index.html">
+<meta property="og:title" content="数据结构与算法-选择排序">
+<meta property="og:url" content="www.fangjiaxian.cn/2019/04/12/数据结构与算法-选择排序/index.html">
 <meta property="og:site_name" content="方嘉贤的个人博客">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/5xnpsBib8F5m8tDZZ9YdlANlkht1W5j4CgnZb8hqi8M!/c/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=XwlABo0gtRURGTM!&tl=3&vuin=946240977&tm=1553788800&sce=60-2-2&rf=0-0">
-<meta property="og:image" content="https://raw.githubusercontent.com/Hufan-ll/test/master/849589-20171015223238449-2146169197.gif">
-<meta property="og:updated_time" content="2019-04-12T03:31:14.263Z">
+<meta property="og:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/SIDh*c548zPdYVKNBWUso.llnwDfhdrd.H7zQWXiPEY!/b/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=YAlABo0gtBURGQ0!&tl=3&vuin=946240977&tm=1555045200&sce=60-2-2&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V11bAUNf1M5l16/FCER02poXS3gESOfNKkVrDPPfSl8uROTf0X3*EXaSts!/b/dLkAAAAAAAAA&bo=HwNfAx8DXwMDGTw!&rf=viewer_4">
+<meta property="og:updated_time" content="2019-04-12T05:25:46.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="排序算法--冒泡排序（Java语言）">
-<meta name="twitter:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/5xnpsBib8F5m8tDZZ9YdlANlkht1W5j4CgnZb8hqi8M!/c/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=XwlABo0gtRURGTM!&tl=3&vuin=946240977&tm=1553788800&sce=60-2-2&rf=0-0">
+<meta name="twitter:title" content="数据结构与算法-选择排序">
+<meta name="twitter:image" content="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/SIDh*c548zPdYVKNBWUso.llnwDfhdrd.H7zQWXiPEY!/b/dL8AAAAAAAAA&ek=1&kp=1&pt=0&bo=YAlABo0gtBURGQ0!&tl=3&vuin=946240977&tm=1555045200&sce=60-2-2&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="方嘉贤的个人博客" type="application/atom+xml">
   
@@ -151,65 +151,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数据结构与算法-冒泡排序" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-数据结构与算法-选择排序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      排序算法--冒泡排序（Java语言）
+      数据结构与算法-选择排序
     </h1>
   
 
         
-        <a href="/2019/03/26/数据结构与算法-冒泡排序/" class="archive-article-date">
-  	<time datetime="2019-03-26T11:26:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
+        <a href="/2019/04/12/数据结构与算法-选择排序/" class="archive-article-date">
+  	<time datetime="2019-04-12T03:29:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/5xnpsBib8F5m8tDZZ9YdlANlkht1W5j4CgnZb8hqi8M!/c/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=XwlABo0gtRURGTM!&amp;tl=3&amp;vuin=946240977&amp;tm=1553788800&amp;sce=60-2-2&amp;rf=0-0" alt><br><a id="more"></a></p>
-<h2 id="冒泡排序（Bubble-Sort）是啥？"><a href="#冒泡排序（Bubble-Sort）是啥？" class="headerlink" title="冒泡排序（Bubble Sort）是啥？"></a>冒泡排序（Bubble Sort）是啥？</h2><blockquote>
-<p>来源百度百科：<br>冒泡排序是一种简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。  </p>
-</blockquote>
-<h2 id="通俗理解"><a href="#通俗理解" class="headerlink" title="通俗理解"></a>通俗理解</h2><p>简单的说，如果我们想将一个数组从小到大排列，我们可以这样做：<br>1.首先可以将数组的最大值移动到最后面。<br>2.再将次大值移动到倒数第二位。<br>3.以此类推，直到将所有数排列好。  </p>
-<p>那冒泡排序是怎么实现上述操作的呢？我们来看下算法描述</p>
-<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>假设我们有数组arr<br>1.令j为0，arr[j]和arr[j+1]比较，使这两个元素的较大值在排在后面，即若arr[j]&gt;arr[j+1]，两数交换位置，若arr[j]&lt;arr[j+1],不换。<br>2.不管换与不换，j++。<br>3.此时的arr[j]和arr[j+1]再进行比较，重复上述操作直到j=arr.length-1（这是整个排序过程的第一轮排序，即将整个数组中的最大值移动到最后面，所以这一轮排序是在j=arr.length-2的时候停止）<br>4.第一轮结束后我们接着进行第二轮，即将次大值移动到数组的倒数第二个位置。那么这一轮结束的标志就是j=arr.length-3<br>5.接着进行第三轮，第四轮…直到第二小的数排好序（你想啊，我们将其他数都排好了，最后一个肯定就是最小值啦）所以我们一共要进行arr.length-1轮排序。<br>6.每一轮排序结束的标志是j=arr.length-1-i。  </p>
-<h2 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a>动图演示</h2><blockquote>
-<p>图片来源网络，侵删<br><img src="https://raw.githubusercontent.com/Hufan-ll/test/master/849589-20171015223238449-2146169197.gif" alt></p>
-</blockquote>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code>public class BubbleSort {
+        <p><img src="http://a4.qpic.cn/psb?/V11bAUNf1M5l16/SIDh*c548zPdYVKNBWUso.llnwDfhdrd.H7zQWXiPEY!/b/dL8AAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=YAlABo0gtBURGQ0!&amp;tl=3&amp;vuin=946240977&amp;tm=1555045200&amp;sce=60-2-2&amp;rf=viewer_4" alt><br><a id="more"></a></p>
+<h2 id="选择排序（Selection-sort）"><a href="#选择排序（Selection-sort）" class="headerlink" title="选择排序（Selection sort）"></a>选择排序（Selection sort）</h2><p>选择排序是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到全部待排序的数据元素排完。 选择排序是不稳定的排序方法。</p>
+<h2 id="简单点"><a href="#简单点" class="headerlink" title="简单点~"></a>简单点~</h2><p>我们可以将选择排序看下一下几个步骤：<br>1.遍历待排序数列，找到其中的最大值（或者最小值）。<br>2.将该值与数列的最后一位（或者第一位）交换位置。<br>3.再次遍历待排序数列，找到其中的找到其中的最大值（或者最小值）<br>4.将该值与数列的倒数第二位（或者第二位）交换位置。<br>5.重复上述操作，直到完成排序。</p>
+<hr>
+<h3 id="图示"><a href="#图示" class="headerlink" title="图示"></a>图示</h3><h2 id><a href="#" class="headerlink" title></a><img src="http://m.qpic.cn/psb?/V11bAUNf1M5l16/FCER02poXS3gESOfNKkVrDPPfSl8uROTf0X3*EXaSts!/b/dLkAAAAAAAAA&amp;bo=HwNfAx8DXwMDGTw!&amp;rf=viewer_4" alt></h2><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code>public class SelectionSort {
 public static void main(String[] args) {
-    int[] arr = new int[] { 2, 8, 7, 9, 4, 1, 5, 0 };
-    bubbleSort(arr);
-}
-
-public static void bubbleSort(int[] arr) {
-    //控制多少轮
-    for (int i = 1; i &lt; arr.length; i++) {
-    //控制每一轮的次数
-        for (int j = 0; j &lt;= arr.length -1 - i; j++) {
-            if (arr[j] &gt; arr[j + 1]) {
-                int temp;
-                temp = arr[j];
-                arr[j] = arr[j + 1]; 
-                arr[j + 1] = temp;
-            }
-        }
-    }
+    int[] arr = new int[] { 2, 3, 5, 7, 89, 6, 4, 57, 8, 6, 5, 67 };
+    SelectionSort(arr);   
     System.out.println(Arrays.toString(arr));
+}
+
+public static void SelectionSort(int[] arr) {
+    // pos用来记录最大值角标
+    int pos;
+    // 交换的变量
+    int temp;
+    // 控制一共遍历多少轮
+    for (int i = 0; i &lt; arr.length - 1; i++) {
+        //初始化角标
+        pos = 0;
+        // 控制每一轮需要比较的次数
+        for (int j = 1; j &lt; arr.length - i; j++) {
+            if (arr[j] &gt; arr[pos]) {
+                pos = j;
+
+            }
+
+        }
+        //将每次遍历到的最大值移动到待排序数列的末尾
+        temp = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = arr[pos];
+        arr[pos] = temp;
 
     }
-}
-</code></pre><hr>
-<p>以上就是我个人对冒泡排序的一些理解，如果有错误的地方欢迎大家指正<br><strong>我的公众号：Java小部落</strong>（我感觉公众号的排版好看一点~）  </p>
-<p><a href="https://www.fangjiaxian.cn/">我的个人博客</a>  </p>
-<p><a href="https://blog.csdn.net/weixin_42657318" target="_blank" rel="noopener">我的CSDN博客</a></p>
-<p><a href="https://www.jianshu.com/u/bb6b968ecac3" target="_blank" rel="noopener">我的简书</a></p>
 
+}
+
+}
+</code></pre>
       
 
       
@@ -278,7 +278,7 @@ public static void bubbleSort(int[] arr) {
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http:www.fangjiaxian.cn/2019/03/26/数据结构与算法-冒泡排序/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http:www.fangjiaxian.cn/2019/04/12/数据结构与算法-选择排序/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,18 +292,9 @@ public static void bubbleSort(int[] arr) {
   
 <nav id="article-nav">
   
-    <a href="/2019/03/26/数据结构与算法-快速排序/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          排序算法-快速排序（Java实现）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/16/我的第一篇博客-利用Hexo-Github搭建过程中遇到的坑/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客--利用Hexo+Github搭建过程中遇到的坑</div>
+    <a href="/2019/04/08/数据结构与算法-希尔排序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构与算法-希尔排序</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -330,7 +321,7 @@ public static void bubbleSort(int[] arr) {
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#冒泡排序（Bubble-Sort）是啥？"><span class="toc-number">1.</span> <span class="toc-text">冒泡排序（Bubble Sort）是啥？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通俗理解"><span class="toc-number">2.</span> <span class="toc-text">通俗理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#算法描述"><span class="toc-number">3.</span> <span class="toc-text">算法描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动图演示"><span class="toc-number">4.</span> <span class="toc-text">动图演示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">5.</span> <span class="toc-text">代码实现</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#选择排序（Selection-sort）"><span class="toc-number">1.</span> <span class="toc-text">选择排序（Selection sort）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单点"><span class="toc-number">2.</span> <span class="toc-text">简单点~</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#图示"><span class="toc-number">2.1.</span> <span class="toc-text">图示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">4.</span> <span class="toc-text">代码实现</span></a></li></ol>
                     </div>
                 </span>
             </div>
